@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">Конвертер валют</string>
+    <string name="currency_selection">Выбор валют</string>
+    <string name="cancel">Отмена</string>
+
+</resources>

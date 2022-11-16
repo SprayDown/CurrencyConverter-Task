@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingTop="30dp"
+        tools:context=".ui.converter.ConverterFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="4dp"
+                android:baselineAligned="false">
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:paddingHorizontal="18dp"
+                    android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText_input_value"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:textSize="25sp"
+                        android:text="120.5"
+                        android:inputType="numberDecimal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_marginVertical="54dp"
+                        android:textSize="25sp"
+                        android:text="RUB" />
+
+                <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_edit_input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:elevation="0dp"
+                        android:stateListAnimator="@null"
+                        app:backgroundTint="@android:color/transparent"
+                        android:textColor="?attr/colorPrimary"
+                        android:textAllCaps="false"
+                        app:cornerRadius="8dp"
+                        android:textSize="20sp"
+                        android:text="Изменить валюту" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:paddingHorizontal="18dp"
+                    android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText_output_value"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:textSize="25sp"
+                        android:text="2.2"
+                        android:inputType="numberDecimal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_marginVertical="54dp"
+                        android:textSize="25sp"
+                        android:text="USD" />
+
+                <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_edit_output"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:elevation="0dp"
+                        android:stateListAnimator="@null"
+                        app:backgroundTint="@android:color/transparent"
+                        android:textColor="?attr/colorPrimary"
+                        app:rippleColor="@color/material_dynamic_neutral70"
+                        android:textAllCaps="false"
+                        app:cornerRadius="8dp"
+                        android:textSize="20sp"
+                        android:text="Изменить валюту" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_reverse_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@android:color/transparent"
+                android:stateListAnimator="@null"
+                app:iconGravity="textStart"
+                android:padding="0dp"
+                app:iconSize="50dp"
+                app:iconPadding="0dp"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                app:elevation="0dp"
+                app:icon="@drawable/ic_baseline_open_in_full_24"
+                app:iconTint="@color/gray"
+                android:layout_gravity="center" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,13 +1,13 @@
-package org.spray.cc.ui.selection
+package org.spray.cc.ui.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
-class SelectionModelFactory(private val url: String) : ViewModelProvider.NewInstanceFactory() {
+class MainModelFactory(private val url: String) : ViewModelProvider.NewInstanceFactory() {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return if (modelClass.isAssignableFrom(SelectionViewModel::class.java)) {
-            SelectionViewModel(url) as T
+        return if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
+            MainViewModel(url) as T
         } else {
             throw IllegalArgumentException("ViewModel Not Found")
         }
