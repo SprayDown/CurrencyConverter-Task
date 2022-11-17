@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/spray/Desktop/projects/android/CurrencyConverterTask/app/src/main/res/layout/content_main.xml" value="0.1" />
+        <entry key="..\:/Users/spray/Desktop/projects/android/CurrencyConverterTask/app/src/main/res/layout/fragment_blank.xml" value="0.10833333333333334" />
+        <entry key="..\:/Users/spray/Desktop/projects/android/CurrencyConverterTask/app/src/main/res/layout/fragment_converter.xml" value="0.20717948717948717" />
+        <entry key="..\:/Users/spray/Desktop/projects/android/CurrencyConverterTask/app/src/main/res/layout/fragment_currency_selection.xml" value="0.20717948717948717" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

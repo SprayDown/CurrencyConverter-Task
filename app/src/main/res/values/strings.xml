@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">Конвертер валют</string>
+    <string name="currency_selection">Выбор валют</string>
+    <string name="cancel">Отмена</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
