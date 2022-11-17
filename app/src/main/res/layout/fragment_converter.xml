@@ -32,7 +32,7 @@
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:maxWidth="150dp"
-                        android:minWidth="150dp"
+                        android:minWidth="70dp"
                         android:textColor="@color/black"
                         android:gravity="center_horizontal"
                         android:textSize="25sp"
@@ -47,20 +47,21 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
                         android:layout_marginVertical="54dp"
-                        android:textSize="25sp"
+                        android:textSize="22sp"
                         android:text="RUB" />
 
                 <com.google.android.material.button.MaterialButton
                         android:id="@+id/button_edit_input"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         app:elevation="0dp"
                         android:stateListAnimator="@null"
                         app:backgroundTint="@android:color/transparent"
+                        app:rippleColor="@color/material_dynamic_neutral80"
                         android:textColor="?attr/colorPrimary"
                         android:textAllCaps="false"
                         app:cornerRadius="8dp"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:text="Изменить валюту" />
 
             </LinearLayout>
@@ -78,7 +79,7 @@
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:maxWidth="150dp"
-                        android:minWidth="150dp"
+                        android:minWidth="70dp"
                         android:textColor="@color/black"
                         android:gravity="center_horizontal"
                         android:textSize="25sp"
@@ -93,21 +94,21 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
                         android:layout_marginVertical="54dp"
-                        android:textSize="25sp"
+                        android:textSize="22sp"
                         android:text="USD" />
 
                 <com.google.android.material.button.MaterialButton
                         android:id="@+id/button_edit_output"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         app:elevation="0dp"
                         android:stateListAnimator="@null"
                         app:backgroundTint="@android:color/transparent"
                         android:textColor="?attr/colorPrimary"
-                        app:rippleColor="@color/material_dynamic_neutral70"
+                        app:rippleColor="@color/material_dynamic_neutral80"
                         android:textAllCaps="false"
                         app:cornerRadius="8dp"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:text="Изменить валюту" />
 
             </LinearLayout>
@@ -115,13 +116,14 @@
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_reverse_currency"
+                android:id="@+id/button_reverse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:backgroundTint="@android:color/transparent"
                 android:stateListAnimator="@null"
                 app:iconGravity="textStart"
                 android:padding="0dp"
+                android:rotation="45"
                 app:iconSize="50dp"
                 app:iconPadding="0dp"
                 android:insetLeft="0dp"
@@ -130,7 +132,7 @@
                 android:insetBottom="0dp"
                 app:elevation="0dp"
                 app:icon="@drawable/ic_baseline_open_in_full_24"
-                app:iconTint="@color/gray"
+                app:iconTint="@color/gray_200"
                 android:layout_gravity="center" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

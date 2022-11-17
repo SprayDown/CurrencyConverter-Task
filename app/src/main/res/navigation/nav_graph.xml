@@ -12,7 +12,11 @@
             tools:layout="@layout/fragment_converter" >
         <action
                 android:id="@+id/action_converterFragment_to_currencySelectionFragment"
-                app:destination="@id/currencySelectionFragment" />
+                app:destination="@id/currencySelectionFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
     <fragment
             android:id="@+id/currencySelectionFragment"
@@ -20,13 +24,15 @@
             android:label="@string/currency_selection"
             tools:layout="@layout/fragment_currency_selection" >
         <argument
-                android:name="selectedCurrence"
-                app:argType="integer"
-                android:defaultValue="0" />
+                android:name="selectedId"
+                app:argType="string" />
+        <argument
+                android:name="currencyIndex"
+                app:argType="integer" />
     </fragment>
     <fragment
             android:id="@+id/blankFragment"
-            android:name="org.spray.cc.BlankFragment"
+            android:name="org.spray.cc.ui.main.BlankFragment"
             android:label="@string/app_name"
             tools:layout="@layout/fragment_blank" />
 </navigation>

@@ -11,7 +11,7 @@ import org.spray.cc.model.Currency
 
 class SelectionAdapter(
     private val dataSet: ArrayList<Currency> = ArrayList(),
-    private var selectedIndex: Int,
+    private var selectedId: String,
     private val listener: OnSelectedListener
 ) :
     RecyclerView.Adapter<SelectionAdapter.CurrencyHolder>() {
@@ -29,9 +29,9 @@ class SelectionAdapter(
 
     override fun onBindViewHolder(holder: SelectionAdapter.CurrencyHolder, position: Int) {
         holder.binding.root.setOnClickListener {
-            listener.onSelect(position)
+            listener.onSelect(dataSet[position].id)
         }
-        holder.bind(dataSet[position], position == selectedIndex)
+        holder.bind(dataSet[position])
     }
 
     fun setDataSet(data: List<Currency>) {
@@ -43,22 +43,16 @@ class SelectionAdapter(
         diffResult.dispatchUpdatesTo(this)
     }
 
-    inner class CurrencyHolder(private val item: View) : RecyclerView.ViewHolder(item) {
+    inner class CurrencyHolder(item: View) : RecyclerView.ViewHolder(item) {
         val binding = ItemCurrencyBinding.bind(item)
 
-        fun bind(currency: Currency, state: Boolean) = with(binding) {
+        fun bind(currency: Currency) = with(binding) {
             textViewName.text = currency.name
             textViewCharCode.text = currency.charCode
 
-            if (state)
-                imageViewCheck.visibility = View.VISIBLE
+            imageViewCheck.visibility =
+                if (currency.id == selectedId) View.VISIBLE else View.INVISIBLE
         }
-    }
-
-    interface OnSelectedListener {
-
-        fun onSelect(position: Int)
-
     }
 
 }
