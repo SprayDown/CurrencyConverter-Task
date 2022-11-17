@@ -14,24 +14,33 @@ class ConverterViewModel : ViewModel() {
         outputCurrency = output
     }
 
-    fun calculateToOutput(value: Float): String {
+    fun reverse() {
+        val prevInput = inputCurrency
+        inputCurrency = outputCurrency
+        outputCurrency = prevInput
+    }
+
+    /**
+     * @return Получаем законвертированную валюту для outputCurrency
+     */
+    fun convertToOutput(value: Float): String {
         val calc = if (outputCurrency.id == "R00000") { // Если находим рубль.
             inputCurrency.value * value
         } else {
             val i = (inputCurrency.value * value)
-            val out = (outputCurrency.value)
+            val out = (outputCurrency.value / outputCurrency.nominal)
             i / out
         }
         return calc.toBigDecimal()
             .setScale(2, RoundingMode.UP).toDouble().toString()
     }
 
-    fun calculateToInput(value: Float): String {
+    fun convertToInput(value: Float): String {
         val calc = if (inputCurrency.id == "R00000") {
             outputCurrency.value * value
         } else {
             val i = (outputCurrency.value * value)
-            val out = (inputCurrency.value)
+            val out = (inputCurrency.value / inputCurrency.nominal)
             i / out
         }
         return calc.toBigDecimal()

@@ -1,10 +1,11 @@
-package org.spray.cc
+package org.spray.cc.ui.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import org.spray.cc.R
 
 class BlankFragment : Fragment() {
 

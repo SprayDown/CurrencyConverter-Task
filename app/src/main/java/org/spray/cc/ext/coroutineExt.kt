@@ -1,4 +1,4 @@
-package org.spray.cc.utils
+package org.spray.cc.ext
 
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.suspendCancellableCoroutine

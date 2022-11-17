@@ -4,10 +4,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.*
+import org.spray.cc.ext.coroutineExceptionHandler
+import org.spray.cc.ext.getNodeValue
 import org.spray.cc.model.Currency
 import org.spray.cc.network.NetworkHelper
-import org.spray.cc.utils.coroutineExceptionHandler
-import org.spray.cc.utils.getNodeValue
 import org.w3c.dom.Element
 import org.w3c.dom.Node
 import org.xml.sax.InputSource
@@ -16,9 +16,11 @@ import javax.xml.parsers.DocumentBuilderFactory
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.EmptyCoroutineContext
 
-class MainViewModel(private val url: String)  : ViewModel() {
+class MainViewModel(private val url: String) : ViewModel() {
 
     val currencyList = MutableLiveData<List<Currency>>()
+
+    /* Отслеживаем работу корутины для ProgressBar */
     val loading = MutableLiveData<Boolean>()
 
     init {
@@ -37,6 +39,10 @@ class MainViewModel(private val url: String)  : ViewModel() {
                 val nList = doc.getElementsByTagName("Valute")
                 val list = ArrayList<Currency>()
 
+                /**
+                 * Рассчет идет по рублю
+                 * В источнике его нету из-за этого добавляется тут вручную...
+                 */
                 list += Currency(
                     id = "R00000",
                     charCode = "RUB",
@@ -65,7 +71,7 @@ class MainViewModel(private val url: String)  : ViewModel() {
                 if (list.isNotEmpty())
                     currencyList.postValue(list)
 
-                delay(20)
+                delay(1500)
             }
         }
     }
