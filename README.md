@@ -1,5 +1,4 @@
-# CurrencyConverter
-
 ### Components:
-**Network:** OkHttp3
-**Navigation:** Jetpack Compose
+
+- **Network:** OkHttp3
+- **Navigation:** Jetpack Compose
